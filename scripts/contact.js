@@ -4,7 +4,8 @@
 const submitButton = document.getElementById('submit-button');
 const contactPage = document.getElementById('contact-page');
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault(); // This prevents the default form submission
   contactPage.innerHTML = '<p>Thank you for your message!</p>';
   contactPage.style.fontSize = '24px';
 });
